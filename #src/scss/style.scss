@@ -37,7 +37,6 @@ body {
 	line-height: 150%;
 	// background-color: #333;
 	font-family: "Roboto", Helvetica, sans-serif;
-	color: #fff;
 	&._lock {
 		overflow: hidden;
 	}
@@ -91,9 +90,9 @@ body {
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
-	flex: 1 1 auto;
-	// padding: 100px 30px 30px 30px;
-	display: flex;
+	// flex: 1 1 auto;
+	// padding: 0 20px;
+	// display: flex;
 	// .page__side
 	&__side {
 		flex: 0 0 300px;
@@ -258,4 +257,111 @@ body {
 	}
 }
 
+//========================================================================================================================================================
+
+.links {
+	a {
+		display: inline-block;
+		position: relative;
+		padding: 10px;
+		font-size: 14px;
+		color: #dadada;
+		transition: all 0.3s ease 0s;
+	}
+	a:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 3px;
+		right: -1px;
+		border: 2px solid #31aae2;
+		border-radius: 50%;
+		width: 35px;
+		height: 35px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease 0s;
+	}
+	a:hover {
+		color: #31aae2;
+	}
+	a:hover:before {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+
+.about {
+	padding: 126px 40px 114px;
+	&__body {
+		display: flex;
+		align-items: center;
+		position: relative;
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+		}
+	}
+	&__title {
+		flex: 0 0 540px;
+		min-width: 540px;
+		padding-left: 75px;
+		text-align: center;
+		@media (max-width: $md2+px) {
+			position: relative;
+			padding-left: 0;
+			min-width: 0;
+			flex: 1 1 auto;
+			
+		}
+		h2 {
+			font-family: Yesteryear;
+			font-size: 89.8px;
+			line-height: 89.8px;
+			font-weight: 400;
+			letter-spacing: 0.06em;
+			color: #333333;
+		}
+	}
+	&__title:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 540px;
+		top: 0;
+		width: 1px;
+		height: 100%;
+		background-color: #333333;
+		@media (max-width: $md2+px) {
+			left: 0;
+			top: 200px;
+			height: 1px;
+			width: 100%;
+			
+		}
+	}
+	&__links {
+		margin-top: 35px;
+		
+	}
+	&__text {
+		max-width: 940px;
+		margin-left: 70px;
+		flex: 1 1 auto;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 400;
+		letter-spacing: 0.06em;
+		color: #333333;
+		@media (max-width: $md2+px) {
+			margin-top: 100px;
+			margin-left: 0;
+			text-align: center;
+		}
+		@media (max-width: $md3+px) {
+			margin-top: 75px;
+		}
+	}
+}

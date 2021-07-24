@@ -16,6 +16,9 @@
 		align-items: center;
 		padding: 28px 0;
 		transition: padding 0.3s ease 0s;
+		@media (max-width:$md3+px){
+			padding: 0 10px 0 20px;
+		}
 	}
 	// .header__menu
 	&__menu {
@@ -91,10 +94,11 @@
 				transition: all 0.2s ease 0s;
 			}
 		}
-		li:hover a {
-			color: #31aae2;
+		@media (any-hover: hover) {
+			li:hover a {
+				color: #31aae2;
+			}
 		}
-		
 	}
 	@media (max-width: $md3+px) {
 		&__body {
@@ -107,7 +111,7 @@
 			transform: translateY(-100%);
 			background: rgb(194, 194, 194);
 			opacity: 0.95;
-			transition: 0.7s ease;
+			transition: 0.4s ease;
 			overflow: auto;
 		}
 		&__list {
